@@ -14,13 +14,14 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords:
   - _ALPHATEST_ON
+  - _EMISSION
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
-  m_LockedProperties: 
+  m_LockedProperties: _UVSec
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -49,7 +50,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 96abe9144609545419e18f668c98e5b3, type: 3}
+        m_Texture: {fileID: 2800000, guid: 008cf15178552a240954abd842946aec, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
