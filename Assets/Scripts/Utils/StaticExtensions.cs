@@ -2,9 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEditor;
 
 public static class StaticExtensions
 {
+
+#if UNITY_EDITOR
+    [UnityEditor.MenuItem("Curso EBAC Unity/Teste %g")]
+    public static void Test()
+    {
+        Debug.Log("Teste testado com sucesso");
+    }
+
+    [UnityEditor.MenuItem("Curso EBAC Unity/Instanciar Cubo %h")]
+    public static void CubeInstantiator()
+    {
+        GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+
+
+        cube.name = "Instantiated Cube";
+        cube.transform.position = Vector3.zero;
+        Undo.RegisterCreatedObjectUndo(cube, "Create Instantiated Cube");
+    }
+#endif
 
     public static void Scale(this Transform t, float size = 1.2f)
     {

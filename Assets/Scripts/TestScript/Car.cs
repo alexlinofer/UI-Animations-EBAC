@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class Car : MonoBehaviour
 {
+    public GameObject carPrefab;
+
+
     public int speed = 20;
     public int gear = 5;
 
@@ -12,4 +16,12 @@ public class Car : MonoBehaviour
         get { return speed * gear; }
 
     }
+
+
+    public void CreateCar()
+    {
+        var a = Instantiate(carPrefab);
+        a.transform.position = Vector3.zero;
+    }
+
 }
