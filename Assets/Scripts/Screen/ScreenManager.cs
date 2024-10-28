@@ -16,6 +16,7 @@ namespace Screens
 
         private void Start()
         {
+
             HideAll();
             ShowByType(startScreen);
         }
